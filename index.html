@@ -730,7 +730,7 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
       </div>
       <div class="audit"><div><b>Free store audit</b><small>Send your store URL in the form below and we reply with 5 ranked fixes within 48 hours.</small></div></div>
     </div>
-    <form id="briefForm" novalidate>
+    <form id="briefForm" action="https://formspree.io/f/xqppyvob" method="POST" novalidate>
       <label>Name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
       <label>Company / store<input id="f-company" name="company" type="text" autocomplete="organization"></label>
       <label>Platform<select id="f-platform" name="platform"><option>Shopify</option><option>WooCommerce</option><option>Magento</option><option>Salla</option><option>Zid</option><option>Odoo</option><option>Not sure yet</option><option>No store yet</option></select></label>
@@ -742,8 +742,8 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
         <span class="note">No spam, no newsletter. Just a reply from the team.</span>
       </div>
       <div class="sent" id="sent" hidden>
-        <h4>Brief ready</h4>
-        <p class="note">This page is a preview and can't send on its own yet. Copy the brief below and send it on WhatsApp or email, or wire the form to your mail service when you go live.</p>
+        <h4 id="sentTitle">Brief sent</h4>
+        <p class="note" id="sentNote">Thanks! We got your brief and will reply soon.</p>
         <pre id="sentText"></pre>
         <div class="row"><button class="btn btn-main" type="button" id="copyBrief">Copy brief</button><a class="btn btn-ghost" id="waLink" href="https://wa.me/201070215485" target="_blank" rel="noopener">Open WhatsApp</a></div>
       </div>
@@ -868,9 +868,22 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     var name=form.name.value.trim(),contact=form.contact.value.trim();
     if(!name||!contact){(name?form.contact:form.name).focus();return;}
     var text='New brief for Pixa\nName: '+name+'\nCompany: '+(form.company.value.trim()||'—')+'\nPlatform: '+form.platform.value+'\nBudget / timeline: '+(form.budget.value.trim()||'—')+'\nDetails: '+(form.message.value.trim()||'—')+'\nContact: '+contact;
-    sentText.textContent=text;sent.hidden=false;
-    document.getElementById('waLink').href='https://wa.me/201070215485?text='+encodeURIComponent(text);
-    sent.scrollIntoView({behavior:'smooth',block:'nearest'});
+    var btn=form.querySelector('button[type=submit]'),btnHtml=btn.innerHTML;
+    btn.disabled=true;btn.textContent='Sending...';
+    var show=function(ok){
+      document.getElementById('sentTitle').textContent=ok?'Brief sent':'Could not send';
+      document.getElementById('sentNote').textContent=ok
+        ?'Thanks! We got your brief and will reply soon. A copy is below, and you can also send it on WhatsApp if it\'s urgent.'
+        :'Something went wrong sending the form. Please copy the brief below and send it on WhatsApp or email.';
+      sentText.textContent=text;sent.hidden=false;
+      document.getElementById('waLink').href='https://wa.me/201070215485?text='+encodeURIComponent(text);
+      sent.scrollIntoView({behavior:'smooth',block:'nearest'});
+      btn.disabled=false;btn.innerHTML=btnHtml;
+      if(ok)form.reset();
+    };
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){show(r.ok);})
+      .catch(function(){show(false);});
   });
   document.getElementById('copyBrief').addEventListener('click',function(){copy(sentText.textContent,this);});
 })();

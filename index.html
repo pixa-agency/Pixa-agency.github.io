@@ -323,6 +323,13 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
 .proof.two{grid-template-columns:repeat(2,1fr)}
 .paper .proof-head span{color:var(--muted-on-paper)}
 @media (max-width:620px){.proof.two{grid-template-columns:1fr}}
+.svc p strong{color:var(--fg-on-paper);font-weight:700;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--c) 32%,transparent) 58%)}
+.pillar li{font-weight:600;color:var(--fg-on-ink)}
+.brief .side{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;row-gap:0;align-items:start}
+.brief .side>*{grid-column:1}
+.brief .side .pricing{grid-column:2;grid-row:1/span 5;max-width:none;margin-top:0}
+.brief .side .audit{max-width:none;justify-self:stretch}
+@media (max-width:900px){.brief .side{grid-template-columns:1fr}.brief .side>*,.brief .side .pricing{grid-column:1;grid-row:auto}.brief .side .pricing{margin-top:22px}}
 </style>
 </head>
 <body>
@@ -470,8 +477,8 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
         <div class="cl"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <span class="num">BUILD · 04</span>
         <h3>E-commerce development</h3>
-        <p>Store builds, migrations and the daily operations that keep a store scaling: catalog, ERP sync, SEO, retention, marketplaces.</p>
-        <ul><li>Shopify, WooCommerce, Magento, Salla, Zid</li><li>Store build &amp; migration</li><li>Shopify ↔ Odoo sync</li><li>Catalog &amp; SEO</li><li>Email &amp; SMS automations</li><li>Amazon, Noon, Jumia</li></ul>
+        <p>Store builds, migrations and the daily operations that keep a store scaling: product listings, A+ content, translation, ERP sync, SEO, marketplaces.</p>
+        <ul><li>Shopify, WooCommerce, Magento, Salla, Zid</li><li>Store build &amp; migration</li><li>Product listings &amp; content</li><li>A+ content</li><li>Arabic ↔ English translation</li><li>Catalog &amp; SEO</li><li>Shopify ↔ Odoo sync</li><li>Amazon, Noon, Jumia, Raneen</li><li>Speed, PDP &amp; checkout CRO</li><li>Payments, BNPL &amp; shipping apps</li></ul>
         <a class="more" href="#svc-commerce" data-tab="commerce">Commerce services →</a>
       </article>
     </div>
@@ -493,38 +500,38 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     <div class="panel" id="svc-marketing" role="tabpanel" aria-labelledby="tab-marketing" style="--c:var(--yellow)">
       <p class="intro">Media buying for Egyptian and Saudi audiences, measured on ROAS and contribution margin rather than clicks.</p>
       <div class="svc-grid">
-        <div class="svc"><span class="k">01 / PLAN</span><h4>Strategy &amp; planning</h4><p>Marketing strategy, audience research, campaign planning, media planning and budget allocation across channels and markets.</p></div>
-        <div class="svc"><span class="k">02 / RUN</span><h4>Campaign management</h4><p>Campaign setup, audience targeting, creative testing, bidding strategies and cross-platform management on Meta, Google, TikTok and Snapchat.</p></div>
-        <div class="svc"><span class="k">03 / SCALE</span><h4>Optimization &amp; growth</h4><p>Performance optimization, budget scaling, conversion-rate optimization, customer acquisition and profitability improvement.</p></div>
-        <div class="svc"><span class="k">04 / PROVE</span><h4>Tracking &amp; reporting</h4><p>Conversion tracking, analytics implementation, KPI monitoring, performance dashboards and monthly reporting you can read in five minutes.</p></div>
-        <div class="svc"><span class="k">05 / KEEP</span><h4>Retention &amp; lifecycle</h4><p>Klaviyo email and SMS flows: welcome, abandoned cart, post-purchase, win-back, plus segmentation and campaign calendars.</p></div>
-        <div class="svc"><span class="k">06 / SEASON</span><h4>Sale-event campaigns</h4><p>Black Friday, Ramadan, White Friday and seasonal pushes: discount rules, bundles, landing pages and ad creative planned together.</p></div>
+        <div class="svc"><span class="k">01 / PLAN</span><h4>Strategy &amp; planning</h4><p><strong>Marketing strategy</strong>, <strong>audience research</strong>, campaign planning, <strong>media planning</strong> and <strong>budget allocation</strong> across channels and markets.</p></div>
+        <div class="svc"><span class="k">02 / RUN</span><h4>Campaign management</h4><p>Campaign setup, audience targeting, <strong>creative testing</strong>, <strong>bidding strategies</strong> and cross-platform management on <strong>Meta, Google, TikTok and Snapchat</strong>.</p></div>
+        <div class="svc"><span class="k">03 / SCALE</span><h4>Optimization &amp; growth</h4><p>Performance optimization, <strong>budget scaling</strong>, <strong>conversion-rate optimization</strong>, customer acquisition and <strong>profitability improvement</strong>.</p></div>
+        <div class="svc"><span class="k">04 / PROVE</span><h4>Tracking &amp; reporting</h4><p><strong>Conversion tracking</strong>, analytics implementation, KPI monitoring, <strong>performance dashboards</strong> and <strong>monthly reporting</strong> you can read in five minutes.</p></div>
+        <div class="svc"><span class="k">05 / KEEP</span><h4>Retention &amp; lifecycle</h4><p><strong>Klaviyo email and SMS flows</strong>: welcome, <strong>abandoned cart</strong>, post-purchase, <strong>win-back</strong>, plus segmentation and campaign calendars.</p></div>
+        <div class="svc"><span class="k">06 / SEASON</span><h4>Sale-event campaigns</h4><p><strong>Black Friday, Ramadan, White Friday</strong> and seasonal pushes: discount rules, bundles, <strong>landing pages</strong> and ad creative planned together.</p></div>
       </div>
     </div>
 
     <div class="panel" id="svc-design" role="tabpanel" aria-labelledby="tab-design" style="--c:var(--pink)" hidden>
       <p class="intro">Creative across industries, from a logo on a business card to a billboard on the ring road.</p>
       <div class="svc-grid">
-        <div class="svc"><span class="k">BRAND</span><h4>Brand identity &amp; logo</h4><p>Logo design, visual identity and brand guidelines, business cards and stationery, brand applications.</p></div>
-        <div class="svc"><span class="k">SOCIAL</span><h4>Social media design</h4><p>Posts and stories, advertising campaigns, Facebook and Instagram ads, carousel design.</p></div>
-        <div class="svc"><span class="k">ADS</span><h4>Advertising &amp; campaign design</h4><p>Promotional campaigns, product advertisements, key visual design and marketing material.</p></div>
-        <div class="svc"><span class="k">PRINT</span><h4>Print &amp; large format</h4><p>Brochures, flyers and catalogs, business profiles and company presentations, banners, billboards and roll-ups, packaging and print-ready artwork.</p></div>
-        <div class="svc"><span class="k">CORPORATE</span><h4>Corporate &amp; industrial</h4><p>Company profiles, corporate presentations, product catalogs, factory and industrial branding.</p></div>
-        <div class="svc"><span class="k">INDUSTRY</span><h4>Specialized industry design</h4><p>Real-estate marketing, fashion and apparel, home-appliance advertising, retail and e-commerce creatives.</p></div>
-        <div class="svc"><span class="k">PRODUCT</span><h4>UI &amp; UX design</h4><p>Website UI/UX, mobile-app UI/UX, dashboards and web-app design, wireframes and interactive prototypes.</p></div>
-        <div class="svc"><span class="k">MEDIA</span><h4>Product photography &amp; reels</h4><p>Product, lifestyle and social reel shoots, edited and ready to publish for your store and ads.</p></div>
+        <div class="svc"><span class="k">BRAND</span><h4>Brand identity &amp; logo</h4><p><strong>Logo design</strong>, visual identity and <strong>brand guidelines</strong>, <strong>business cards and stationery</strong>, brand applications.</p></div>
+        <div class="svc"><span class="k">SOCIAL</span><h4>Social media design</h4><p><strong>Posts and stories</strong>, advertising campaigns, <strong>Facebook and Instagram ads</strong>, <strong>carousel design</strong>.</p></div>
+        <div class="svc"><span class="k">ADS</span><h4>Advertising &amp; campaign design</h4><p>Promotional campaigns, <strong>product advertisements</strong>, <strong>key visual design</strong> and marketing material.</p></div>
+        <div class="svc"><span class="k">PRINT</span><h4>Print &amp; large format</h4><p><strong>Brochures, flyers and catalogs</strong>, business profiles and company presentations, <strong>banners, billboards and roll-ups</strong>, packaging and <strong>print-ready artwork</strong>.</p></div>
+        <div class="svc"><span class="k">CORPORATE</span><h4>Corporate &amp; industrial</h4><p><strong>Company profiles</strong>, corporate presentations, <strong>product catalogs</strong>, <strong>factory and industrial branding</strong>.</p></div>
+        <div class="svc"><span class="k">INDUSTRY</span><h4>Specialized industry design</h4><p><strong>Real-estate marketing</strong>, <strong>fashion and apparel</strong>, home-appliance advertising, retail and e-commerce creatives.</p></div>
+        <div class="svc"><span class="k">PRODUCT</span><h4>UI &amp; UX design</h4><p><strong>Website UI/UX</strong>, <strong>mobile-app UI/UX</strong>, dashboards and web-app design, wireframes and <strong>interactive prototypes</strong>.</p></div>
+        <div class="svc"><span class="k">MEDIA</span><h4>Product photography &amp; reels</h4><p><strong>Product, lifestyle and social reel shoots</strong>, edited and ready to publish for your store and ads.</p></div>
       </div>
     </div>
 
     <div class="panel" id="svc-odoo" role="tabpanel" aria-labelledby="tab-odoo" style="--c:var(--teal)" hidden>
       <p class="intro">Odoo functional consulting tailored to each business, from requirements to go-live and the months after.</p>
       <div class="svc-grid">
-        <div class="svc"><span class="k">DISCOVER</span><h4>Requirements &amp; process mapping</h4><p>Business requirements analysis and process mapping before a single module is switched on.</p></div>
-        <div class="svc"><span class="k">CONFIGURE</span><h4>Functional consulting</h4><p>Odoo functional consulting and module configuration, ERP implementation and business-process optimization.</p></div>
-        <div class="svc"><span class="k">OPERATE</span><h4>Sales, purchase &amp; inventory</h4><p>Quotations to invoices, vendor bills, warehouses, reordering rules and stock accuracy.</p></div>
-        <div class="svc"><span class="k">PRODUCE</span><h4>Manufacturing &amp; production</h4><p>Bills of materials, work orders, production workflows and inventory for factories and workshops.</p></div>
-        <div class="svc"><span class="k">SELL</span><h4>POS &amp; CRM</h4><p>Point-of-sale for restaurants, cafés and retail; CRM configuration, lead and opportunity pipelines.</p></div>
-        <div class="svc"><span class="k">SUPPORT</span><h4>Training, go-live &amp; support</h4><p>User training, testing and go-live support, then workflow improvement and ongoing functional support.</p></div>
+        <div class="svc"><span class="k">DISCOVER</span><h4>Requirements &amp; process mapping</h4><p><strong>Business requirements analysis</strong> and <strong>process mapping</strong> before a single module is switched on.</p></div>
+        <div class="svc"><span class="k">CONFIGURE</span><h4>Functional consulting</h4><p>Odoo functional consulting and <strong>module configuration</strong>, <strong>ERP implementation</strong> and business-process optimization.</p></div>
+        <div class="svc"><span class="k">OPERATE</span><h4>Sales, purchase &amp; inventory</h4><p><strong>Quotations to invoices</strong>, vendor bills, <strong>warehouses</strong>, <strong>reordering rules</strong> and <strong>stock accuracy</strong>.</p></div>
+        <div class="svc"><span class="k">PRODUCE</span><h4>Manufacturing &amp; production</h4><p><strong>Bills of materials</strong>, <strong>work orders</strong>, production workflows and inventory for factories and workshops.</p></div>
+        <div class="svc"><span class="k">SELL</span><h4>POS &amp; CRM</h4><p><strong>Point-of-sale</strong> for restaurants, cafés and retail; <strong>CRM configuration</strong>, lead and opportunity pipelines.</p></div>
+        <div class="svc"><span class="k">SUPPORT</span><h4>Training, go-live &amp; support</h4><p><strong>User training</strong>, testing and <strong>go-live support</strong>, then workflow improvement and ongoing functional support.</p></div>
       </div>
       <h3 style="margin-top:36px;font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase">Industries we implement for</h3>
       <div class="ind-list">
@@ -534,23 +541,25 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
       <h3 style="margin-top:36px;font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase">Business analysis for Odoo</h3>
       <p class="intro" style="margin-top:12px">Business analysis for Odoo ERP implementations: we gather the requirements, map the workflows, find the gaps and turn business needs into effective ERP solutions, so operations and Odoo functionality line up.</p>
       <div class="svc-grid">
-        <div class="svc"><span class="k">REQUIREMENTS</span><h4>Business requirements gathering</h4><p>Workshops and interviews with each department to capture what the business actually needs before configuration starts.</p></div>
-        <div class="svc"><span class="k">WORKFLOWS</span><h4>Workflow analysis</h4><p>Current-state process mapping to see where work slows down, repeats or breaks, and what the target flow should look like.</p></div>
-        <div class="svc"><span class="k">GAPS</span><h4>Gap identification</h4><p>Fit-gap review of requirements against standard Odoo, so you know what is covered, what needs setup and what needs customization.</p></div>
-        <div class="svc"><span class="k">SOLUTIONS</span><h4>Needs into ERP solutions</h4><p>Translating business needs into Odoo configuration, custom modules and dashboards, aligned with how your operations really run.</p></div>
+        <div class="svc"><span class="k">REQUIREMENTS</span><h4>Business requirements gathering</h4><p>Workshops and interviews with each department to capture <strong>what the business actually needs</strong> before configuration starts.</p></div>
+        <div class="svc"><span class="k">WORKFLOWS</span><h4>Workflow analysis</h4><p>Current-state process mapping to see <strong>where work slows down, repeats or breaks</strong>, and what the target flow should look like.</p></div>
+        <div class="svc"><span class="k">GAPS</span><h4>Gap identification</h4><p><strong>Fit-gap review</strong> of requirements against standard Odoo, so you know what is covered, what needs setup and what needs customization.</p></div>
+        <div class="svc"><span class="k">SOLUTIONS</span><h4>Needs into ERP solutions</h4><p>Translating business needs into <strong>Odoo configuration, custom modules and dashboards</strong>, aligned with how your operations really run.</p></div>
       </div>
     </div>
 
     <div class="panel" id="svc-commerce" role="tabpanel" aria-labelledby="tab-commerce" style="--c:var(--blue)" hidden>
       <p class="intro">We have run stores from the inside for six years. That is what we bring to yours: development plus the daily operations that keep it growing.</p>
-      <div class="svc-grid">
-        <div class="svc"><span class="k">BUILD</span><h4>Store build &amp; migration</h4><p>New stores and redesigns on Shopify, WooCommerce, Salla and Zid; migrations from Magento, WordPress or custom platforms.</p></div>
-        <div class="svc"><span class="k">DEV</span><h4>Development &amp; integrations</h4><p>Custom Liquid builds, theme and speed optimization, app audits, local payment gateways (Paymob, Valu, Tabby, Tamara) and shipping apps.</p></div>
-        <div class="svc"><span class="k">ERP</span><h4>Shopify / WooCommerce ↔ Odoo sync</h4><p>Real-time inventory and order sync, webhook and API error handling, so stock online matches stock in the warehouse.</p></div>
-        <div class="svc"><span class="k">CATALOG</span><h4>Catalog &amp; content operations</h4><p>Structuring, correcting and scaling catalogs of thousands of SKUs: attributes, pricing, descriptions, bulk updates.</p></div>
-        <div class="svc"><span class="k">SEO · CRO</span><h4>SEO &amp; conversion</h4><p>Keyword research, on-page and technical SEO; PDP, collection and checkout UX fixes that raise conversion and AOV.</p></div>
-        <div class="svc"><span class="k">MARKETPLACE</span><h4>Marketplace management</h4><p>Amazon, Noon, Jumia and Raneen vendor dashboards: listings, pricing and order accuracy.</p></div>
-        <div class="svc"><span class="k">CARE</span><h4>Ongoing store management</h4><p>Monthly retainers: campaigns, promotions, merchandising, customer-experience fixes and performance tracking.</p></div>
+            <div class="svc-grid">
+        <div class="svc"><span class="k">BUILD</span><h4>Store build &amp; migration</h4><p>New stores and redesigns on <strong>Shopify, WooCommerce, Salla and Zid</strong>; <strong>migrations</strong> from Magento, WordPress or custom platforms.</p></div>
+        <div class="svc"><span class="k">DEV</span><h4>Development &amp; integrations</h4><p><strong>Custom Liquid builds</strong>, theme and speed optimization, app audits, <strong>local payment gateways</strong> (Paymob, Valu, Tabby, Tamara) and shipping apps.</p></div>
+        <div class="svc"><span class="k">ERP</span><h4>Shopify / WooCommerce ↔ Odoo sync</h4><p><strong>Real-time inventory and order sync</strong>, webhook and API error handling, so stock online matches stock in the warehouse.</p></div>
+        <div class="svc"><span class="k">LISTINGS</span><h4>Product listings &amp; content</h4><p>Writing, structuring, correcting and scaling listings across <strong>catalogs of thousands of SKUs</strong>: <strong>titles, descriptions, attributes</strong>, pricing, bulk updates.</p></div>
+        <div class="svc"><span class="k">A+ CONTENT</span><h4>A+ &amp; enhanced content</h4><p><strong>Feature blocks</strong>, comparison charts, lifestyle modules and infographics that explain the product and lift conversion.</p></div>
+        <div class="svc"><span class="k">TRANSLATION</span><h4>Arabic ↔ English translation</h4><p><strong>Translation and localization</strong> of titles, descriptions, A+ modules and store pages, with consistent terminology across markets.</p></div>
+        <div class="svc"><span class="k">SEO · CRO</span><h4>SEO &amp; conversion</h4><p>Keyword research, <strong>on-page and technical SEO</strong>; PDP, collection and <strong>checkout UX fixes</strong> that raise conversion and AOV.</p></div>
+        <div class="svc"><span class="k">MARKETPLACE</span><h4>Marketplace management</h4><p><strong>Amazon, Noon, Jumia and Raneen vendor dashboards</strong>: listings, <strong>A+ content</strong>, pricing and order accuracy.</p></div>
+        <div class="svc"><span class="k">CARE</span><h4>Ongoing store management</h4><p><strong>Monthly retainers</strong>: campaigns, promotions, merchandising, customer-experience fixes and performance tracking.</p></div>
       </div>
     </div>
   </div>
@@ -733,7 +742,7 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     <p class="lead">You talk directly to the people doing the work. Each discipline is led by someone who has done it in-house for brands in Egypt and Saudi Arabia.</p>
     <div class="team">
       <div class="role" style="--c:var(--blue)"><span class="who">Build</span><b>E-commerce development</b><span>Shopify Liquid, ERP integrations, speed, CRO</span>
-        <ul><li>Custom Liquid themes &amp; features</li><li>Shopify / WooCommerce ↔ Odoo sync</li><li>Core Web Vitals, PageSpeed 88 mobile</li><li>PDP, cart and checkout funnels</li><li>Payments, BNPL &amp; shipping apps</li></ul></div>
+        <ul><li>Custom Liquid themes &amp; features</li><li>Shopify / WooCommerce ↔ Odoo sync</li><li>Core Web Vitals, PageSpeed 88 mobile</li><li>PDP, cart and checkout funnels</li><li>Product listings, A+ content &amp; translation</li><li>Payments, BNPL &amp; shipping apps</li></ul></div>
       <div class="role" style="--c:#9E7BFF"><span class="who">Run</span><b>E-commerce operations</b><span>Catalog, SEO, merchandising, marketplaces</span>
         <ul><li>Catalogs of 20,000+ SKUs</li><li>On-page &amp; technical SEO</li><li>Promotions, bundles, sale events</li><li>Amazon, Noon, Jumia, Raneen</li><li>Customer-experience fixes</li></ul></div>
       <div class="role" style="--c:var(--yellow)"><span class="who">Grow</span><b>Media buying</b><span>Meta, Google, TikTok, Snap for EG &amp; KSA</span>
@@ -806,7 +815,7 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     </div>
     <div><h4>Services</h4><ul><li><a href="#svc-marketing" data-tab="marketing">Performance marketing</a></li><li><a href="#svc-design" data-tab="design">Design &amp; branding</a></li><li><a href="#svc-odoo" data-tab="odoo">Odoo implementation</a></li><li><a href="#svc-commerce" data-tab="commerce">E-commerce development</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#markets">Why us</a></li><li><a href="#team">Team</a></li><li><a href="#brief">Start a project</a></li></ul></div>
-    <div><h4>Markets</h4><ul><li>Egypt</li><li>Saudi Arabia</li><li>UAE · Kuwait · Qatar</li><li>Europe &amp; US (expanding)</li></ul></div>
+    <div><h4>Markets</h4><ul><li>Egypt</li><li>Saudi Arabia</li><li>UAE · Kuwait · Qatar · Bahrain</li><li>Jordan</li><li>Europe &amp; US (expanding)</li></ul></div>
   </div>
   <div class="copy"><div class="wrap"><span>© 2026 Pixa. All rights reserved.</span><span>Cairo · Riyadh (remote)</span></div></div>
 </footer>

@@ -771,8 +771,7 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     <form id="briefForm" action="https://formspree.io/f/xqppyvob" method="POST" novalidate>
       <label>Name<input id="f-name" name="name" type="text" autocomplete="name" required></label>
       <label>Company / store<input id="f-company" name="company" type="text" autocomplete="organization"></label>
-      <label>Platform<select id="f-platform" name="platform"><option>Shopify</option><option>WooCommerce</option><option>Magento</option><option>Salla</option><option>Zid</option><option>Odoo</option><option>Not sure yet</option><option>No store yet</option></select></label>
-      <label>Budget / timeline<input id="f-budget" name="budget" type="text" placeholder="e.g. ongoing, or a 2-week project"></label>
+      <label class="full">Budget / timeline<input id="f-budget" name="budget" type="text" placeholder="e.g. ongoing, or a 2-week project"></label>
       <label class="full">What do you need help with?<textarea id="f-msg" name="message" placeholder="Store URL, what's not working, what you want to reach"></textarea></label>
       <label class="full">Email or WhatsApp<input id="f-contact" name="contact" type="text" autocomplete="email" required></label>
       <div class="actions">
@@ -904,7 +903,7 @@ footer .tl{font-family:var(--display);font-weight:300;font-size:.7rem;letter-spa
     e.preventDefault();
     var name=form.name.value.trim(),contact=form.contact.value.trim();
     if(!name||!contact){(name?form.contact:form.name).focus();return;}
-    var text='New brief for Pixa\nName: '+name+'\nCompany: '+(form.company.value.trim()||'—')+'\nPlatform: '+form.platform.value+'\nBudget / timeline: '+(form.budget.value.trim()||'—')+'\nDetails: '+(form.message.value.trim()||'—')+'\nContact: '+contact;
+    var text='New brief for Pixa\nName: '+name+'\nCompany: '+(form.company.value.trim()||'—')+'\nBudget / timeline: '+(form.budget.value.trim()||'—')+'\nDetails: '+(form.message.value.trim()||'—')+'\nContact: '+contact;
     var btn=form.querySelector('button[type=submit]'),btnHtml=btn.innerHTML;
     btn.disabled=true;btn.textContent='Sending...';
     var show=function(ok){
